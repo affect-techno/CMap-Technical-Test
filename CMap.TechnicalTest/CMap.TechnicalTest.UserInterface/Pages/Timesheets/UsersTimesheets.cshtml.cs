@@ -28,7 +28,7 @@ public class UsersTimesheets : PageModel
     
     public UserTimesheetsViewModel? ViewModel { get; private set; }
 
-    [BindProperty, Required, DisplayName("Week Commencing")]
+    [BindProperty, Required, DisplayName("Week Commencing"), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
     public DateTime? WeekCommencing { get; set; }
 
     public IActionResult OnGet(Guid? userId = null, string? date = null)

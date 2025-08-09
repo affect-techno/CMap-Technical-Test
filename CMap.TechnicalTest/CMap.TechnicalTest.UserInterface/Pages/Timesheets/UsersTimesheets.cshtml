@@ -30,6 +30,13 @@
     </form>
 </div>
 
+<hr/>
+
+@if (Model?.ViewModel != null)
+{
+    <p>Timesheet Entries for 7 days following @Html.DisplayFor(modelItem => modelItem.WeekCommencing)</p>
+}
+
 @if (Model?.ViewModel?.ProjectHours != null)
 {
     <div>
