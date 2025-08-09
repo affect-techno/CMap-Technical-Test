@@ -1,0 +1,118 @@
+@page "{userId:guid?}/{date?}"
+@model UsersTimesheets
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "View Timesheet Entries";
+}
+
+<p>@ViewData["Title"]</p>
+
+<div>
+    <form asp-page-handler="search" method="post">
+        <div asp-validation-summary="ModelOnly"></div>
+
+        <div class="form-grid">
+            <label asp-for="UserId">User</label>
+            <select asp-for="UserId" asp-items="Model.Users">
+                <option value="">Select a user</option>
+            </select>
+            <span asp-validation-for="UserId"></span>
+
+            <label asp-for="WeekCommencing">Week Commencing</label>
+            <input type="date" asp-for="WeekCommencing" />
+            <span asp-validation-for="WeekCommencing"></span>
+        </div>
+
+        <div class="form-actions">
+            <input type="submit" value="Search" />
+        </div>
+    </form>
+</div>
+
+@if (Model?.ViewModel?.ProjectHours != null)
+{
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ViewModel!.ProjectHours.First().ProjectName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ViewModel!.ProjectHours.First().TotalHours)
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var projectHours in Model.ViewModel.ProjectHours)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => projectHours.ProjectName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => projectHours.TotalHours)
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}
+
+@if (Model?.ViewModel?.Timesheets != null)
+{
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ViewModel!.Timesheets.First().Date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ViewModel!.Timesheets.First().ProjectName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ViewModel!.Timesheets.First().Hours)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ViewModel!.Timesheets.First().Description)
+                </th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var timesheetEntry in Model.ViewModel.Timesheets)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => timesheetEntry.Date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => timesheetEntry.ProjectName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => timesheetEntry.Hours)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => timesheetEntry.Description)
+                    </td>
+                    <td>
+                        <div class="row-actions">
+                            <form asp-page-handler="edit" method="post">
+                                <input type="submit" value="Edit" />
+                                <input type="hidden" name="id" value="@timesheetEntry.Id" />
+                            </form>
+                            <form asp-page-handler="delete" method="post">
+                                <input type="submit" value="Delete" />
+                                <input type="hidden" name="id" value="@timesheetEntry.Id" />
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}

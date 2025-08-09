@@ -1,0 +1,204 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px; /* space for footer */
+    color: #1f2937;
+    background-color: #f7f9fc;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+    line-height: 1.5;
+}
+
+/* Links */
+a {
+    color: #175cd3;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #144bb3;
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus {
+    box-shadow: 0 0 0 0.25rem rgba(23, 92, 211, 0.25);
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #175cd3;
+    border-color: #1557c8;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #144bb3;
+    border-color: #1248a0;
+}
+
+.btn-outline-primary {
+    color: #175cd3;
+    border-color: #175cd3;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    color: #fff;
+    background-color: #175cd3;
+    border-color: #1557c8;
+}
+
+/* Forms */
+.form-label {
+    font-weight: 600;
+    color: #334155;
+}
+
+.form-control,
+.form-select {
+    border-color: #d6dae1;
+    background-color: #ffffff;
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+    border-color: #175cd3;
+    box-shadow: 0 0 0 0.25rem rgba(23, 92, 211, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: #175cd3;
+    border-color: #175cd3;
+}
+
+/* Tables */
+.table {
+    --tbl-border-color: #e6e9ef;
+    border-color: var(--tbl-border-color);
+}
+
+.table thead th {
+    background-color: #f2f5f9;
+    color: #111827;
+    font-weight: 600;
+    border-bottom-color: #e6e9ef;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: rgba(2, 8, 20, 0.015);
+}
+
+.table-hover > tbody > tr:hover > * {
+    background-color: rgba(2, 8, 20, 0.04);
+}
+
+/* Cards and containers */
+.card {
+    border: 1px solid #e6e9ef;
+    border-radius: 0.5rem;
+    box-shadow: 0 .25rem .65rem rgba(2, 8, 20, .06);
+    background-color: #fff;
+}
+
+.card-header {
+    background-color: #f7f9fc;
+    border-bottom: 1px solid #e6e9ef;
+    font-weight: 600;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 .25rem .65rem rgba(2, 8, 20, .06);
+}
+
+.navbar .nav-link {
+    color: #334155;
+    padding: .5rem .75rem;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active {
+    color: #175cd3;
+}
+
+/* Footer */
+.footer {
+    background-color: #ffffff;
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+/* Validation helpers (aligned with Bootstrap danger color) */
+.field-validation-error {
+    color: #dc3545;
+    font-size: .875rem;
+    grid-column: 2;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #dc3545;
+    background-color: #fff5f5;
+}
+
+.validation-summary-errors {
+    font-weight: 600;
+    color: #dc3545;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    column-gap: 12px;
+    row-gap: 10px;
+    max-width: 640px;
+    align-items: center;
+}
+
+.form-grid label {
+    font-weight: 600;
+}
+
+.form-grid select,
+.form-grid input[type="date"],
+.form-grid input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-actions {
+    margin-top: 14px; /* space between the last field and the Search button */
+}
+
+.row-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.row-actions form {
+    margin: 0;
+}

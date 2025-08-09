@@ -1,0 +1,43 @@
+﻿@page
+@model NewTimesheet
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "New Timesheet";
+}
+
+<p>@ViewData["Title"]</p>
+
+<form method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+
+    <div class="form-grid">
+        <label asp-for="TimesheetEntry!.UserId">User</label>
+        <select asp-for="TimesheetEntry!.UserId" asp-items="Model.Users">
+            <option value="">Select a user</option>
+        </select>
+        <span asp-validation-for="TimesheetEntry!.UserId"></span>
+
+        <label asp-for="TimesheetEntry!.ProjectId">Project</label>
+        <select asp-for="TimesheetEntry!.ProjectId" asp-items="Model.Projects">
+            <option value="">Select a project</option>
+        </select>
+        <span asp-validation-for="TimesheetEntry!.ProjectId"></span>
+
+        <label asp-for="TimesheetEntry!.Date">Date</label>
+        <input type="date" asp-for="TimesheetEntry!.Date" />
+        <span asp-validation-for="TimesheetEntry!.Date"></span>
+
+        <label asp-for="TimesheetEntry!.Hours">Hours Worked</label>
+        <input type="number" asp-for="TimesheetEntry!.Hours" />
+        <span asp-validation-for="TimesheetEntry!.Hours"></span>
+
+        <label asp-for="TimesheetEntry!.Description">Description</label>
+        <input asp-for="TimesheetEntry!.Description" />
+        <span asp-validation-for="TimesheetEntry!.Description"></span>
+    </div>
+
+    <div class="form-actions">
+        <input type="submit" value="Add" />
+    </div>
+</form>

@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CMap.TechnicalTest.BusinessLogic.Interfaces\CMap.TechnicalTest.BusinessLogic.Interfaces.csproj" />
+      <ProjectReference Include="..\CMap.TechnicalTest.DataAccess.Interfaces\CMap.TechnicalTest.DataAccess.Interfaces.csproj" />
+      <ProjectReference Include="..\CMap.TechnicalTest.Models\CMap.TechnicalTest.Models.csproj" />
+    </ItemGroup>
+
+</Project>

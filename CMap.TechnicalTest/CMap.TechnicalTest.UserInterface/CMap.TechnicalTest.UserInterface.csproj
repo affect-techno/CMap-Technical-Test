@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CMap.TechnicalTest.BusinessLogic.Interfaces\CMap.TechnicalTest.BusinessLogic.Interfaces.csproj" />
+      <ProjectReference Include="..\CMap.TechnicalTest.ServiceRegister\CMap.TechnicalTest.ServiceRegister.csproj" />
+    </ItemGroup>
+
+</Project>
