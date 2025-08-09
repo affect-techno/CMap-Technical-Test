@@ -36,7 +36,7 @@ public class TimesheetEntryValidation : ITimesheetEntryValidation
         if (_timesheetEntryRepository.GetTimesheetEntryById(timesheetEntry.Id) is null)
             _errorDetails.Add(new BadRequestDetail($"No timesheet entry found for ID {timesheetEntry.Id}", nameof(timesheetEntry.Id)));
 
-        return _errorDetails.Count > 0 ? new BadRequestException("The updated timesheet entry is invalid", _errorDetails) : null; //TODO
+        return _errorDetails.Count > 0 ? new BadRequestException("The updated timesheet entry is invalid", _errorDetails) : null;
     }
 
     private void ValidateCommonRules(TimesheetEntry timesheetEntry)

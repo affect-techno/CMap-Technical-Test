@@ -24,6 +24,5 @@ public static class SimpleRegister
             .AddTransient<ITimesheetLogic, TimesheetLogic>()
             .AddTransient<ITimesheetEntryForUserValidation, TimesheetEntryForUserValidation>()
             .AddTransient<ITimesheetEntryValidation, TimesheetEntryValidation>();
-        //TODO: add remainder
     }
 }
