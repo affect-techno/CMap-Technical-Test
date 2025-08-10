@@ -11,7 +11,7 @@ public static class DateUtility
         if(string.IsNullOrWhiteSpace(date))
             return null;
 
-        if (DateTime.TryParseExact(date, FormatString, CultureInfo.InvariantCulture, DateTimeStyles.AssumeLocal, out var result))
+        if (DateTime.TryParseExact(date, FormatString, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal, out var result))
         {
             return result;
         }

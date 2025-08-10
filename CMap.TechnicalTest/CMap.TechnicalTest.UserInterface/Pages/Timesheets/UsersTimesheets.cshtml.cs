@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using CMap.TechnicalTest.BusinessLogic.Exceptions;
 using CMap.TechnicalTest.BusinessLogic.Interfaces;
+using CMap.TechnicalTest.BusinessLogic.Interfaces.Exceptions;
 using CMap.TechnicalTest.BusinessLogic.Interfaces.Models;
 using CMap.TechnicalTest.UserInterface.Utilities;
 using Microsoft.AspNetCore.Mvc;

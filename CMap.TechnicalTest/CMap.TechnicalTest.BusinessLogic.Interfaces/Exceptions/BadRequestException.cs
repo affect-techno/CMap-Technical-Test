@@ -1,4 +1,4 @@
-﻿namespace CMap.TechnicalTest.BusinessLogic.Exceptions;
+﻿namespace CMap.TechnicalTest.BusinessLogic.Interfaces.Exceptions;
 
 public class BadRequestException : Exception
 {

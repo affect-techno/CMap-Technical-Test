@@ -1,6 +1,6 @@
-﻿using CMap.TechnicalTest.BusinessLogic.Exceptions;
-using CMap.TechnicalTest.BusinessLogic.Validation;
+﻿using CMap.TechnicalTest.BusinessLogic.Validation;
 using CMap.TechnicalTest.BusinessLogic.Interfaces;
+using CMap.TechnicalTest.BusinessLogic.Interfaces.Exceptions;
 using CMap.TechnicalTest.BusinessLogic.Interfaces.Models;
 using CMap.TechnicalTest.DataAccess.Interfaces;
 using CMap.TechnicalTest.Models;

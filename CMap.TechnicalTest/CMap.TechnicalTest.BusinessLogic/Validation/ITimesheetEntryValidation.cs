@@ -1,4 +1,4 @@
-﻿using CMap.TechnicalTest.BusinessLogic.Exceptions;
+﻿using CMap.TechnicalTest.BusinessLogic.Interfaces.Exceptions;
 using CMap.TechnicalTest.Models;
 
 namespace CMap.TechnicalTest.BusinessLogic.Validation;
